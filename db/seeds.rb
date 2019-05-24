@@ -10,6 +10,7 @@ require 'faker'
 
 #  Users db
 
+Camel.destroy_all
 User.destroy_all
 p "Cleaning users' database..."
 p "Creating new users"
@@ -39,7 +40,7 @@ p "There are #{User.count} users"
 camel_category = ['Apartment', 'City', 'Desert', 'Mountain', 'Speed Race',
   'Water', 'Friendly Camel', 'Horny Camel', 'Fancy Camel', 'Swaggy Camel']
 
-Camel.destroy_all
+
 p "Cleaning camels' database..."
 p "Creating new camels"
 
@@ -47,7 +48,8 @@ p "Creating new camels"
             description:  Faker::Quote.yoda,
             category:     camel_category.sample,
             location:     Faker::Address.city,
-            price:        rand(100))
+            price:        rand(100),
+            photo:        "https://images.unsplash.com/photo-1549468057-5b7fa1a41d7a?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1651&q=80")
             camel.user = User.first
             camel.save!
 end

@@ -1,4 +1,5 @@
 class Camel < ApplicationRecord
+  mount_uploader :photo, PhotoUploader
   belongs_to :user
 
   CATEGORY = ['Apartment', 'City', 'Desert', 'Mountain', 'Speed Race',
@@ -9,7 +10,4 @@ class Camel < ApplicationRecord
   validates :category, inclusion: { in: CATEGORY }
   validates :location, presence: true
   # validates :price, presence: true
-
-  mount_uploader :photo, PhotoUploader
-
 end
