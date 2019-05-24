@@ -10,5 +10,4 @@ class Camel < ApplicationRecord
   validates :category, inclusion: { in: CATEGORY }
   validates :location, presence: true
   validates :price, presence: true
-
 end
