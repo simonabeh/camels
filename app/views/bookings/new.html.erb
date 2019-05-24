@@ -1,2 +1,13 @@
-<h1>Bookings#new</h1>
-<p>Find me in app/views/bookings/new.html.erb</p>
+<div class="container">
+  <h1>Book a <%= @camel.name %></h1>
+  <%= cl_image_tag @camel.photo, height: 300, width: 400, crop: :fill %>
+  <div class="container mt-5">
+    <%= simple_form_for [@camel, @booking] do |f| %>
+    <%= f.input :date %>
+    <%= f.submit class: 'btn btn-primary' %>
+    <% end %>
+  </div>
+  <%= link_to 'go back home', camels_path  %>
+</div>
+
+
