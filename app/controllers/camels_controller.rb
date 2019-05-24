@@ -1,5 +1,6 @@
 class CamelsController < ApplicationController
   before_action :set_camel, only: [:show, :edit, :update, :destroy]
+  skip_before_action :authenticate_user!, only: :index
 
   def index
     @camels = policy_scope(Camel)
@@ -11,12 +12,13 @@ class CamelsController < ApplicationController
 
   def new
     @camel = Camel.new
+    authorize @camel
   end
 
   def create
-    authorize @camel
     @camel = Camel.new(camel_params)
     @camel.user = current_user
+    authorize @camel
     if @camel.save
       redirect_to camel_path(@camel)
     else
