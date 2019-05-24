@@ -2,7 +2,7 @@ class CamelsController < ApplicationController
   before_action :set_camel, only: [:show, :edit, :update, :destroy]
 
   def index
-    @camels = Camel.all
+    @camels = policy_scope(Camel)
   end
 
   def show
@@ -14,6 +14,7 @@ class CamelsController < ApplicationController
   end
 
   def create
+    authorize @camel
     @camel = Camel.new(camel_params)
     @camel.user = current_user
     if @camel.save
