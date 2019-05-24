@@ -1,6 +1,7 @@
 class Camel < ApplicationRecord
   mount_uploader :photo, PhotoUploader
   belongs_to :user
+  has_many :bookings
 
   CATEGORY = ['Apartment', 'City', 'Desert', 'Mountain', 'Speed Race',
   'Water', 'Friendly Camel', 'Horny Camel', 'Fancy Camel', 'Swaggy Camel']

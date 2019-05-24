@@ -8,6 +8,7 @@ class CamelsController < ApplicationController
 
   def show
     # @camel = Camel.find(params[:id])
+    authorize @camel
   end
 
   def new
@@ -35,6 +36,7 @@ class CamelsController < ApplicationController
   end
 
   def destroy
+    authorize @camel
     @camel.destroy
     redirect_to camels_path
   end
