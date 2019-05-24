@@ -1,2 +1,10 @@
 <h1>Camels#edit</h1>
-<p>Find me in app/views/camels/edit.html.erb</p>
+<div class="container">
+  <h1>Edit a camel's profile</h1>
+  <%= render 'form', camel: @camel %>
+  <%= link_to 'show', camel _path  %>
+  <%= link_to 'Back', camels_path %>
+</div>
+
+
+
