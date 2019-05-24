@@ -1,2 +1,49 @@
-<h1>Camels#show</h1>
-<p>Find me in app/views/camels/show.html.erb</p>
+<link href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
+<body>
+  <div id="wrap">
+    <div id="product_layout_1">
+      <div class="top">
+      <div class="product_images">
+        <div class="product_image_1">
+           <%= cl_image_tag @camel.photo, height: 300, width: 400, crop: :fill %>
+        </div>
+        </div>
+        <div class="product_info">
+          <h1> <%= @camel.name %></h1>
+          <div class="price">
+          <h2 class="sale_price">$75</h2>
+          </div>
+
+          <div class="product_description">
+          <p><%= @camel.description %></p>
+          </div>
+
+          <div class="buying">
+                 <div class="cart">
+                   <a href="" class="add">Réserver<i class="fa fa-shopping-cart fa-lg"></i></a>
+                 </div>
+          </div>
+          </div>
+
+          </div>
+        </div>
+        <div class="bottom">
+        <div class="reviews">
+          <div class="head">
+            <h2>Reviews (TO DO)</h2>
+          </div>
+            <div class="content">
+              <span class="name">Marty McFly</span><span class="stars"><i class="fa fa-star fa-2x"></i><i class="fa fa-star fa-2x"></i><i class="fa fa-star fa-2x"></i><i class="fa fa-star-half-o fa-2x"></i><i class="fa fa-star-o fa-2x"></i></span>
+              <p class="review_text">"Un kiff ce bossu"</p>
+              <p class="fullReview"><a href="#">View Full Review</a></p>
+              <span class="writeReview"><a href="#">Write your Own Review</a></span>
+            </div>
+          </div>
+            </div>
+
+
+
+
+
+
+
