@@ -1,6 +1,12 @@
 class CamelsController < ApplicationController
+  before_action :set_camel, only: [:show, :edit, :update, :destroy]
+
   def index
     @camels = Camel.all
+  end
+
+  def show
+    # @camel = Camel.find(params[:id])
   end
 
   def new
@@ -16,19 +22,25 @@ class CamelsController < ApplicationController
     end
   end
 
-  def show
-  end
-
   def edit
+    # @camel = Camel.find(params[:id])
   end
 
   def update
+    @camel.update(camel_params)
+    redirect_to camels_path
   end
 
-  def delete
+  def destroy
+    @camel.destroy
+    redirect_to camels_path
   end
 
   private
+
+  def set_camel
+    @camel = Camel.find(params[:id])
+  end
 
   def camel_params
     params.require(:camel).permit(:name, :description, :category, :location)
