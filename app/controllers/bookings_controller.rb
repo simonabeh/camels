@@ -1,5 +1,7 @@
 class BookingsController < ApplicationController
   before_action :set_camel, only: [:show, :new, :create, :edit, :update, :destroy]
+  skip_after_action :verify_authorized, except: :index
+  skip_after_action :verify_policy_scoped, only: :index
 
   def index
     @bookings = Booking.all

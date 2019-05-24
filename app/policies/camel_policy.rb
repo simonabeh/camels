@@ -5,6 +5,10 @@ class CamelPolicy < ApplicationPolicy
     end
   end
 
+  def show?
+    return true
+  end
+
   def new?
     return true
   end
@@ -18,6 +22,6 @@ class CamelPolicy < ApplicationPolicy
   end
 
   def destroy?
-    record.user == user
+    record.user == user && record.bookings.empty?
   end
 end

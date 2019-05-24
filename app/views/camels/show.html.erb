@@ -24,11 +24,14 @@
             </div>
           </div>
           <!-- remove a camel -->
+
+          <% if policy(@camel).destroy? %>
             <div class= "remove">
               <%= link_to camel_path(@camel), method: :delete, class: "btn btn-warning" do %>
                 <i class="fas fa-trash"></i>
               <% end %>
-          </div>
+            </div>
+          <% end %>
         </div>
         <div class="bottom">
         <div class="reviews">
