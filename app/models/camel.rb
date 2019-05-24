@@ -8,7 +8,7 @@ class Camel < ApplicationRecord
   validates :description, presence: true
   validates :category, inclusion: { in: CATEGORY }
   validates :location, presence: true
-  # validates :price, presence: true
+  validates :price, presence: true
 
   mount_uploader :photo, PhotoUploader
 
