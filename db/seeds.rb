@@ -54,4 +54,3 @@ end
 
 p "There are #{Camel.count} camels!"
 p "Seeds done"
-
