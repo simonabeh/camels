@@ -16,7 +16,7 @@ class CamelsController < ApplicationController
   def create
     @camel = Camel.new(camel_params)
     @camel.user = current_user
-    if @camel.save!
+    if @camel.save
       redirect_to camel_path(@camel)
     else
       render :new
