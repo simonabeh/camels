@@ -6,6 +6,7 @@
     <%= link_to "Add a camel", new_camel_path, class: "btn btn-primary btn-lg" %>
   </div>
 </div>
+
 <div class="container">
   <div class="row">
   <div class="row">
@@ -20,11 +21,11 @@
           </div>
         </div>
 
-        <!-- <div class="card" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)), url('<%= cl_image_path camel.photo, width: 400, height: 500, crop: :fill %>');">
+        <!-- <div class="card" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)), url('<%#= cl_image_path camel.photo, width: 400, height: 500, crop: :fill %>');">
           <div class="card-description">
-            <h2><%= camel.name %></h2>
+            <h2><%#= camel.name %></h2>
           </div>
-          <%= link_to "camel", camel_path(camel), class: 'card-link' %>
+          <%#= link_to "camel", camel_path(camel), class: 'card-link' %>
         </div>
          -->
       </div>
