@@ -24,7 +24,6 @@ class CamelsController < ApplicationController
   end
 
   def edit
-    # @camel = Camel.find(params[:id])
   end
 
   def update
