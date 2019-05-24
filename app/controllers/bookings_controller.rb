@@ -14,7 +14,6 @@ class BookingsController < ApplicationController
   def new
     # @camel = Camel.find(params[:camel_id])
     @booking = Booking.new
-    authorize @booking
   end
 
   def create
