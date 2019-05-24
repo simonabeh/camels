@@ -45,3 +45,18 @@ p "There are #{User.count} users"
 
 p "There are #{Camel.count} camels!"
 p "Seeds done"
+
+
+
+
+Camel.create(name: "Albert", description:  "Tres bon chameau", category: "Desert", location:"Dubai",price: 50, user: User.first)
+
+
+
+
+
+
+
+
+
+
