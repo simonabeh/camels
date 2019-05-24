@@ -10,6 +10,8 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
+
+ActiveRecord::Schema.define(version: 2019_05_24_102244) do
 ActiveRecord::Schema.define(version: 2019_05_24_100435) do
 
   # These are extensions that must be enabled in order to support this database
@@ -23,6 +25,7 @@ ActiveRecord::Schema.define(version: 2019_05_24_100435) do
     t.bigint "user_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.integer "price"
     t.string "photo"
     t.index ["user_id"], name: "index_camels_on_user_id"
   end
@@ -35,6 +38,8 @@ ActiveRecord::Schema.define(version: 2019_05_24_100435) do
     t.datetime "remember_created_at"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.integer "age"
+    t.string "name"
     t.index ["email"], name: "index_users_on_email", unique: true
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
