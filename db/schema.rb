@@ -23,8 +23,8 @@ ActiveRecord::Schema.define(version: 2019_05_24_102244) do
     t.bigint "user_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.integer "price"
     t.string "photo"
+    t.integer "price"
     t.index ["user_id"], name: "index_camels_on_user_id"
   end
 
