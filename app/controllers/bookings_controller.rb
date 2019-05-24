@@ -8,7 +8,6 @@ class BookingsController < ApplicationController
   end
 
   def show
-
   end
 
   def new
@@ -27,28 +26,26 @@ class BookingsController < ApplicationController
     end
   end
 
-def edit
+  def edit
+  end
+
+  def update
+  end
+
+  def destroy
+    @booking = Booking.find(params[:id])
+    @camel = @booking.camel
+    @booking.destroy
+    redirect_to root_path
+  end
+
+  private
+
+  def set_camel
+    @camel = Camel.find(params[:camel_id])
+  end
+
+  def booking_params
+    params.require(:booking).permit(:date, :user_id, :camel_id)
+  end
 end
-
-def update
-end
-
-def destroy
-  @booking = Booking.find(params[:id])
-  @camel = @booking.camel
-  @booking.destroy
-  redirect_to root_path
-end
-
-private
-
-def set_camel
-  @camel = Camel.find(params[:camel_id])
-end
-
-def booking_params
-  params.require(:booking).permit(:date, :user_id, :camel_id)
-end
-end
-
-
