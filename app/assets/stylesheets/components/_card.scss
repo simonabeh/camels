@@ -34,14 +34,17 @@
   }
   h3 {
     font-size: 18px;
+    font-weight: bold;
   }
-  h5 {
+  p {
     color: rgb(50,50,50);
-    font-size: 14px;
+    font-size: 12px;
   }
-  .fas {
-    color: rgb(200, 200, 200);
-    margin-right: 8px;
-  }
+}
+
+.more {
+  font-size: 10px;
+  color: $desert;
+  font-style: italic;
 }
 
