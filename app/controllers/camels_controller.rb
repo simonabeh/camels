@@ -19,12 +19,13 @@ class CamelsController < ApplicationController
   def create
     @camel = Camel.new(camel_params)
     @camel.user = current_user
-    authorize @camel
-    if @camel.save
-      redirect_to camel_path(@camel)
+    if @camel.valid?
+      @camel.save
+      redirect_to camels_path
     else
       render :new
     end
+    authorize @camel
   end
 
   def edit
