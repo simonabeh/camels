@@ -17,12 +17,10 @@ class BookingsController < ApplicationController
 
   def create
     @booking = Booking.new(booking_params)
-    @booking.user = current_user
-    @booking.camel = @camel
-    if @booking.save!
-      redirect_to camels_path
+    if @booking.save
+      redirect_to bookings_path(@booking)
     else
-      render :new
+      redirect_to camel_path(Camel.find_by_id(params[:camel_id].to_i))
     end
   end
 
