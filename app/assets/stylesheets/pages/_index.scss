@@ -1,3 +1,16 @@
 // Import page-specific CSS files here.
 @import "home";
 @import "show";
+
+body{
+  background:#efefef;
+  font-family:'Raleway'sans-serif;
+  font-size:100%;
+}
+h1{
+  font-weight: bolder;
+  font-family:'Raleway'sans-serif;
+}
+img{
+  max-width:100%;
+}

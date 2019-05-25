@@ -1,7 +1,21 @@
 .btn{
-  margin-left: 150px;
+  margin-left: 0px;
+  background-color: #c2b280;
 }
 
+.btn:hover {
+  opacity: 0.8;
+}
+
+.btn-home {
+  margin-left: 50px;
+  border-radius: 0.5;
+}
+
+.btn-book {
+  margin-top: 8px;
+  border-radius: 0.5;
+}
 
 
 

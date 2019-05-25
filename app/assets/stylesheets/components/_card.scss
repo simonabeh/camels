@@ -1,0 +1,47 @@
+.card-product {
+  width: 240px;
+  height: 400px;
+  margin: 32px auto !important;
+  border-radius: 24px;
+  background-color: white;
+  color: $desert;
+  background-position: right top;
+  background-size: 100%;
+  position: relative;
+  margin: 16px;
+  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+  &:hover {
+    opacity:0.8;
+  }
+  img {
+    border-radius: 10px 10px 0 0;
+  }
+}
+
+.card-product-infos {
+  background-color: white;
+  width: 100%;
+  font-size: 12px;
+  border-radius: 0px;
+  position: absolute;
+  bottom: 0px;
+  padding: 16px;
+  text-align: center;
+  border-radius: 0 0 10px 10px;
+  .btn {
+    color: white;
+    border-radius: 24px;
+  }
+  h3 {
+    font-size: 18px;
+  }
+  h5 {
+    color: rgb(50,50,50);
+    font-size: 14px;
+  }
+  .fas {
+    color: rgb(200, 200, 200);
+    margin-right: 8px;
+  }
+}
+

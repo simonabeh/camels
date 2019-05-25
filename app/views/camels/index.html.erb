@@ -1,34 +1,41 @@
-<h1>Camels#index</h1>
-<div class="banner" style="background-image: /*linear-gradient(-225deg, rgba(0,101,168,0.6) 0%, rgba(0,36,61,0.6) 50%),*/ url('<%= image_path 'background.jpg' %>');">
+<div class="banner margin-bottom-m" style="background-image: url('<%= image_path 'camel-background.jpg' %>');">
   <div class="banner-content">
     <h1>Choose your desert ship !</h1>
-    <p>Camelize or dromedarize your daily life</p>
-    <%= link_to "Add a camel", new_camel_path, class: "btn btn-primary btn-lg" %>
+    <p>Camelize your daily life</p>
+    <%= link_to "Add a camel", new_camel_path, class: "btn btn-home" %>
   </div>
 </div>
+
 <div class="container">
+  <h1>Our selection</h1>
   <div class="row">
-  <div class="row">
-    <% @camels.each do |camel| %>
-      <div class="col-xs-12 col-sm-6 col-md-3">
+    <div class="row">
+      <% @camels.each do |camel| %>
+      <div class="col-12 col-lg-4 col-md-6 col-sm-12">
 
         <div class="card-product">
-          <img src="https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/skateboard.jpg">
+          <img src="https://images.unsplash.com/photo-1549468057-5b7fa1a41d7a?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1651&q=80">
           <div class="card-product-infos">
-            <h2>Product name</h2>
-            <p>Product description with <strong>relevant info</strong> only.</p>
-          </div>
-        </div>
-
-        <!-- <div class="card" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)), url('<%= cl_image_path camel.photo, width: 400, height: 500, crop: :fill %>');">
-          <div class="card-description">
             <h2><%= camel.name %></h2>
+            <p><%= camel.description %></p>
+            <p><%= camel.category %></p>
+            <p><%= camel.location %></p>
+            <h3><%= camel.price %>$</h3>
+            <%= link_to "Book #{camel.name.split[0]}", new_camel_booking_path(camel), class: "btn btn-book" %>
           </div>
-          <%= link_to "camel", camel_path(camel), class: 'card-link' %>
         </div>
-         -->
       </div>
-    <% end %>
-  </div>
+      <% end %>
+    </div>
   </div>
 </div>
+
+    <!-- <div class="card" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)), url('<%#= cl_image_path camel.photo, width: 400, height: 500, crop: :fill %>');">
+              <div class="card-description">
+                <h2><%#= camel.name %></h2>
+              </div>
+              <%#= link_to "camel", camel_path(camel), class: 'card-link' %>
+            </div>
+          </div> -->
+
+
