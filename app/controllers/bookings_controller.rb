@@ -24,12 +24,6 @@ class BookingsController < ApplicationController
     end
   end
 
-  def edit
-  end
-
-  def update
-  end
-
   def destroy
     @booking = Booking.find(params[:id])
     @camel = @booking.camel

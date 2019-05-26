@@ -30,33 +30,18 @@ p "There are #{User.count} users"
 
 # Camels db
 
-# camel_category = ['Apartment', 'City', 'Desert', 'Mountain', 'Speed Race',
-#   'Water', 'Friendly Camel', 'Horny Camel', 'Fancy Camel', 'Swaggy Camel']
+camel_category = ['Apartment', 'City', 'Desert', 'Mountain', 'Speed Race',
+  'Water', 'Friendly Camel', 'Horny Camel', 'Fancy Camel', 'Swaggy Camel']
 
-# 5.times do camel = Camel.new(name: Faker::FunnyName.name,
-#             description:  Faker::Quote.yoda,
-#             category:     camel_category.sample,
-#             location:     Faker::Address.city,
-#             price:        rand(100),
-#             photo:        "https://images.unsplash.com/photo-1549468057-5b7fa1a41d7a?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1651&q=80")
-#             camel.user = User.first
-#             camel.save!
-# end
+10.times do camel = Camel.new(name: Faker::FunnyName.name,
+            description:  Faker::Quote.yoda,
+            category:     camel_category.sample,
+            location:     Faker::Address.city,
+            price:        rand(100),
+            photo:        "https://images.unsplash.com/photo-1549468057-5b7fa1a41d7a?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1651&q=80")
+            camel.user = User.first
+            camel.save!
+end
 
 p "There are #{Camel.count} camels!"
 p "Seeds done"
-
-
-
-
-Camel.create(name: "Albert", description:  "Tres bon chameau", category: "Desert", location:"Dubai",price: 50, user: User.first)
-
-
-
-
-
-
-
-
-
-
