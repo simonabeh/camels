@@ -1,0 +1,30 @@
+.form-container {
+  width: 380px;
+  margin: 20px auto;
+  background-color: #c2b280;
+  border-radius: 12px;
+  padding: 20px;
+  box-shadow: 0 0 30px rgba(0, 0, 0, 0.2);
+  text-align: center;
+  color: black;
+  h1 {
+    font-size: 32px;
+    margin: 0;
+  }
+  a {
+    color: black;
+    &:hover {
+      text-decoration: none;
+      color: rgb(120, 120, 120);
+    }
+  }
+  .btn {
+    color: white;
+    background-color: black;
+    border-radius: 24px;
+    margin-bottom: 16px;
+  }
+}
+
+
+
