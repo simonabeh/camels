@@ -18,8 +18,7 @@
           <div class="card-product-infos">
             <h2><%= camel.name %></h2>
             <p><%= camel.description %></p>
-            <p><%= camel.category %></p>
-            <p><%= camel.location %></p>
+            <p><%= "#{camel.category}, #{camel.location}" %></p>
             <h3><%= camel.price %>$</h3>
             <%= link_to "Book #{camel.name.split[0]}", new_camel_booking_path(camel), class: "btn btn-book" %>
             <h5><%= link_to "More infos", camel_path(camel), class: "more" %></h5>
@@ -30,13 +29,4 @@
     </div>
   </div>
 </div>
-
-    <!-- <div class="card" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)), url('<%#= cl_image_path camel.photo, width: 400, height: 500, crop: :fill %>');">
-              <div class="card-description">
-                <h2><%#= camel.name %></h2>
-              </div>
-              <%#= link_to "camel", camel_path(camel), class: 'card-link' %>
-            </div>
-          </div> -->
-
 
