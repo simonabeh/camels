@@ -9,15 +9,18 @@
 
 .btn-home {
   margin-left: 50px;
-  border-radius: 0.5;
+  border-radius: 5px;
 }
 
 .btn-book {
   margin-top: 8px;
-  border-radius: 0.5;
+  font-size: 14px;
 }
-
-
-
-
-
+.btn-delete {
+  background-color: black;
+  color: $desert;
+  margin-top: 5px;
+  &:hover{
+  background-color: red;
+  }
+}
