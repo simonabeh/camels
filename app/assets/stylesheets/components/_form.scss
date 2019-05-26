@@ -1,14 +1,16 @@
 .form-container {
   width: 380px;
-  margin: 20px auto;
+  margin: 30px auto;
   background-color: #c2b280;
-  border-radius: 12px;
+  border-radius: 5px;
   padding: 20px;
-  box-shadow: 0 0 30px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 0 30px rgba(0, 0, 0, 0.3);
   text-align: center;
   color: black;
+  font-weight: bold;
+  float: right;
   h1 {
-    font-size: 32px;
+    font-size: 24px;
     margin: 0;
   }
   a {
@@ -26,5 +28,13 @@
   }
 }
 
+.form-control-label {
+  float: left;
+  font-size: 12px;
+}
 
+.file {
+  float: left;
+  font-size: 12px;
+}
 
