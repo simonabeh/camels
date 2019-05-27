@@ -6,6 +6,16 @@
   box-shadow: 0 0 30px rgba(0, 0, 0, 0.3);
   text-align: center;
   color: black;
-  font-weight: bold;
+  font-weight: bolder;
   padding: 20px;
+  a {
+    font-size: 10px;
+    color: gray;
+    font-weight: lighter;
+  }
+  h2 {
+    font-weight: bold;
+  }
 }
+
+
