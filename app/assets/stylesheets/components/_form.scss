@@ -1,6 +1,6 @@
 .form-container {
   width: 380px;
-  margin: 30px auto;
+  margin: 50px auto;
   position: relative;
   background-color: #c2b280;
   border-radius: 5px;
@@ -9,7 +9,7 @@
   text-align: center;
   color: black;
   font-weight: bold;
-  float: right;
+  float: left;
   h1 {
     font-size: 24px;
     margin: 0;
@@ -40,3 +40,10 @@
   font-size: 12px;
 }
 
+.form-actions {
+  margin-bottom: 10px;
+}
+
+.form-check-label {
+  font-size: 12px
+}
