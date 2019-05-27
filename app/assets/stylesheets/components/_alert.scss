@@ -6,9 +6,11 @@
 }
 
 .notice {
+    z-index: 99999;
     text-align: center;
     background-color: #00bb68;
     color: #ffffff;
     position: absolute;
     width: 100%;
+    top: 60px;
 }
