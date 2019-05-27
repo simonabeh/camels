@@ -33,12 +33,14 @@ p "There are #{User.count} users"
 camel_category = ['Apartment', 'City', 'Desert', 'Mountain', 'Speed Race',
   'Water', 'Friendly Camel', 'Horny Camel', 'Fancy Camel', 'Swaggy Camel']
 
+camel_picture = ["https://res.cloudinary.com/simonabeh/image/upload/v1558948931/camel-1.jpg", "https://res.cloudinary.com/simonabeh/image/upload/v1558948925/camel-2.jpg", "https://res.cloudinary.com/simonabeh/image/upload/v1558948925/camel-3.jpg", "https://res.cloudinary.com/simonabeh/image/upload/v1558948916/camel-4.jpg", "https://res.cloudinary.com/simonabeh/image/upload/v1558948896/camel-5.jpg"]
+
 10.times do camel = Camel.new(name: Faker::FunnyName.name,
             description:  Faker::Quote.yoda,
             category:     camel_category.sample,
             location:     Faker::Address.city,
             price:        rand(100),
-            photo:        "https://images.unsplash.com/photo-1549468057-5b7fa1a41d7a?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1651&q=80")
+            remote_photo_url: camel_picture.sample)
             camel.user = User.first
             camel.save!
 end
