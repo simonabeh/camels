@@ -1,5 +1,5 @@
 <div class="container">
-  <h1>Book a <%= @camel.name %></h1>
+  <h1>Book <%= @camel.name %></h1>
   <%= cl_image_tag @camel.photo, height: 300, width: 400, crop: :fill %>
   <div class="container mt-5">
     <%= simple_form_for [@camel, @booking] do |f| %>
