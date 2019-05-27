@@ -15,10 +15,6 @@
 }
 
 .page-container-add {
-  background: url("https://images.unsplash.com/photo-1505925119181-3537e71dbc72?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1355&q=80");
-  min-height: 100vh;
-  margin-top: 67px;
-  background-size: cover;
-  background-position: bottom center;
-  padding:0;
+  min-height: calc(100vh - 70px);
+  padding-top: 80px;
 }
