@@ -1,13 +1,15 @@
-<div class="container">
-  <h1>Book a <%= @camel.name %></h1>
-  <%= cl_image_tag @camel.photo, height: 300, width: 400, crop: :fill %>
-  <div class="container mt-5">
+<img id="background-add" src="https://images.unsplash.com/photo-1505925119181-3537e71dbc72?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1355&q=80">
+
+<div class="bookingform">
+  <h1>Book <%= @camel.name %></h1>
+  <div class="imagebooking", style="background-image: url('<%= cl_image_path @camel.photo %>');"></div>
+    <h2>Date</h2>
+  <div class="container mt-2">
     <%= simple_form_for [@camel, @booking] do |f| %>
-    <%= f.input :date %>
+    <%= f.input :date, label: false%>
     <%= f.submit class: 'btn btn-primary' %>
     <% end %>
   </div>
-  <%= link_to 'go back home', camels_path  %>
+  <p id="show-text"><%= link_to 'Show all camels available', camels_path%></p>
 </div>
-
 
