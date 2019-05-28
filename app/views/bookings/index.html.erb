@@ -15,7 +15,8 @@
       <% @bookings.each do |booking| %>
         <div class="rows-dashboard">
           <p class="row-middle">
-            <%= booking.camel.name %>
+            <%= link_to "#{booking.camel.name}", camel_path(booking.camel) %>
+            <%=  %>
           </p>
           <p id="info">
             <%= booking.date.strftime("%m/%d/%Y") %>
@@ -43,7 +44,7 @@
       <% @camels.each do |camel| %>
         <div class="rows-dashboard">
           <p class="row-middle">
-            <%= camel.name %>
+            <%= link_to "#{camel.name}", camel_path(camel) %>
           </p>
           <p id="info">
             <%= camel.location %>
