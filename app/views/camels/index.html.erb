@@ -1,17 +1,19 @@
 <div class="banner margin-bottom-m" style="background-image: url('<%= image_path 'camel-background.jpg' %>');">
   <div class="banner-content">
-    <h1>Choose your desert ship !</h1>
+    <h1 class="title">Choose your desert ship !</h1>
     <p>Camelize your daily life</p>
     <%= link_to "Add your camel", new_camel_path, class: "btn btn-home" %>
   </div>
 </div>
 
-<!-- <div class ="map-container"> -->
+<div class="map-container">
+  <h1>Our camel map</h1>
   <div id="map"
     data-markers="<%= @markers.to_json %>"
     data-mapbox-api-key="<%= ENV['MAPBOX_API_KEY'] %>"
   ></div>
-<!-- </div> -->
+</div>
+
 
 <div class="container">
 
@@ -36,6 +38,26 @@
 
       </div>
       <% end %>
+  </div>
+</div>
+
+<div class="container">
+  <h1>Advantages</h1>
+  <div class="row" >
+<!--     <div class="cards-services"> -->
+      <div class="card-feature col-12 col-lg-4 col-md-6 col-sm-12">
+        <%= image_tag 'undraw_desert.png' %>
+        <h4>Awesome ride</h4>
+      </div>
+      <div class="card-feature col-12 col-lg-4 col-md-6 col-sm-12">
+        <%= image_tag 'undraw_itinary.png' %>
+        <h4>Available everywhere</h4>
+      </div>
+      <div class="card-feature col-12 col-lg-4 col-md-6 col-sm-12">
+        <%= image_tag 'undraw_mobile.png' %>
+        <h4>Mobile access</h4>
+      </div>
+    <!-- </div> -->
   </div>
 </div>
 
