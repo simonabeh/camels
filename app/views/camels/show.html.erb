@@ -8,31 +8,32 @@
         <div class="container">
           <div class="form-wrapper" style="width: 300px; margin: 0 auto;">
            <h1> <%= @camel.name %></h1>
-           <p><%= @camel.description %></p>
-           <p><%= "Category: #{@camel.category}" %></p>
-           <p><%= "Location: #{@camel.location}" %></p>
-           <p><%= "Price/day - VAT included" %></p>
-           <h3><%= "#{@camel.price}$" %></h3>
+           <p class="camel-description"><%= @camel.description %></p>
+           <p class="camel-cat-<%= @camel.category %>"><%= "Category: #{@camel.category}" %></p>
+           <div class="price">
+           <p id="vat"><%= "Price/day - VAT included" %></p>
+           <h3><%= "#{@camel.price}$  " %></h3>
+           </div>
            <%= simple_form_for [@camel, @booking] do |f| %>
            <%= f.input :date, label: false, placeholder: "Select your date", as: :string, required: false, input_html: {class: "datepicker"} %>
            <%= f.button :submit, "Create your booking", class: "btn btn-primary" %>
            <% end %>
          </div>
        </div>
-        <div class="show-action">
+       <div class="show-action">
 
-    <% if policy(@camel).destroy? %>
-    <div class= "remove">
-      <%= link_to camel_path(@camel), method: :delete, class: "btn btn-delete" do %>
-      <i class="fas fa-trash"></i>
-      <% end %>
+        <% if policy(@camel).destroy? %>
+        <div class= "remove">
+          <%= link_to camel_path(@camel), method: :delete, class: "btn btn-delete" do %>
+          <i class="fas fa-trash"></i>
+          <% end %>
+        </div>
+        <% end %>
+      </div>
+      <p id="show-text"><%= link_to 'Show all camels available', camels_path%></p>
+
     </div>
-    <% end %>
   </div>
-       <p id="show-text"><%= link_to 'Show all camels available', camels_path%></p>
-
-     </div>
-   </div>
 
 
 </div>
