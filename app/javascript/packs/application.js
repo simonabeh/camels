@@ -4,3 +4,7 @@ import { initMapbox } from '../plugins/init_mapbox';
 import "../plugins/flatpickr";
 
 initMapbox();
+
+import { initDropdownMenu } from '../components/dropdown';
+
+initDropdownMenu();

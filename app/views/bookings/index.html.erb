@@ -2,11 +2,10 @@
 
   <h1>My Dashboard</h1>
 
-  <h3>My bookings</h3>
+  <h3 id="bookings-title">My bookings</h3>
+  <%#= image_tag "arrow-down.svg" %>
 
-  <div class="hide">
-
-    <div class="dashboard-section">
+    <div class="dashboard-section" id="bookings-section">
       <div class="headers-column">
         <p class="headers-middle">Name</p>
         <p>Date of Booking</p>
@@ -32,13 +31,9 @@
       <%= link_to "Book another camel !", root_path, class: "btn btn-home" %>
     </div>
 
-  </div>
+  <h3 id="camels-title">My camels' fleet</h3>
 
-  <h3>My camels' fleet</h3>
-
-  <div class="hide">
-
-    <div class="dashboard-section">
+    <div class="dashboard-section" id="camels-section">
       <div class="headers-column">
         <p class="headers-middle">Name</p>
         <p>Location</p>
@@ -63,8 +58,6 @@
     <div id="expand-camel">
       <%= link_to "Expand your fleet", new_camel_path, class: "btn btn-home" %>
     </div>
-
-  </div>
 
 </div>
 
