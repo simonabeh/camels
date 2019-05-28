@@ -19,11 +19,7 @@
            <% end %>
          </div>
        </div>
-       <p id="show-text"><%= link_to 'Show all camels available', camels_path%></p>
-     </div>
-   </div>
-
-   <div class="show-action">
+        <div class="show-action">
 
     <% if policy(@camel).destroy? %>
     <div class= "remove">
@@ -33,6 +29,12 @@
     </div>
     <% end %>
   </div>
+       <p id="show-text"><%= link_to 'Show all camels available', camels_path%></p>
+
+     </div>
+   </div>
+
+
 </div>
 </div>
 
