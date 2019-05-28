@@ -1,6 +1,6 @@
 .bookingform {
-  width: 380px;
-  margin: 70px auto 0 auto;
+  width: 580px;
+  margin: auto 0 auto;
   background-color: #c2b280;
   border-radius: 5px;
   box-shadow: 0 0 30px rgba(0, 0, 0, 0.3);
@@ -54,5 +54,10 @@
 
 .bookingform h2 {
   margin-top: 10px;
+}
+
+.bookingform p {
+  font-weight: lighter;
+
 }
 

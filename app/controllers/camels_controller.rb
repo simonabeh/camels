@@ -8,6 +8,7 @@ class CamelsController < ApplicationController
 
   def show
     # @camel = Camel.find(params[:id])
+    @booking = Booking.new
     authorize @camel
   end
 
