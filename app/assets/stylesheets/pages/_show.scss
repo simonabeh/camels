@@ -1,0 +1,152 @@
+.camel-spec{
+  display: flex;
+  justify-content: space-evenly;
+  padding-top: 50px;
+}
+
+.product-image {
+  float: left;
+  padding: 20px 20px 20px 0;
+  border-radius: 5px;
+}
+
+.product-info {
+  padding: 20px 20px 20px 0;
+  p {
+    margin-top: 30px;
+  }
+}
+
+.show-action {
+  margin-top: 30px;
+  display: flex;
+  justify-content: space-around;
+}
+
+h6 {
+  font-style: italic;
+  font-size: 10px;
+  margin: 32.5px 50px;
+}
+
+.price {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row-reverse;
+  p{
+    font-size:10px;
+    margin-left: 15px;
+  }
+  h3 {
+    margin: 0px;
+  }
+}
+
+p.camel-description {
+  position: relative;
+  text-transform: capitalize;
+}
+
+p.camel-description:before {
+  position: absolute;
+  content: '';
+  height: 20px;
+  width: 20px;
+  background: url(asset-path('quote-left.png'));
+  left: 0;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+p.camel-description:after {
+  position: absolute;
+  content: '';
+  height: 20px;
+  width: 20px;
+  background: url(asset-path('quote-right.png'));
+  right: 0;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+.camel-cat-City,
+.camel-cat-Friendly,
+.camel-cat-Fancy,
+.camel-cat-Speed,
+.camel-cat-Horny,
+.camel-cat-Swaggy,
+.camel-cat-Water,
+.camel-cat-Apartment,
+.camel-cat-Desert,
+.camel-cat-Mountain {
+  position: relative;
+  margin-top: 70px !important;
+}
+
+.camel-cat-Apartment:before,
+.camel-cat-Water:before,
+.camel-cat-Swaggy:before,
+.camel-cat-Horny:before,
+.camel-cat-Speed:before,
+.camel-cat-Fancy:before,
+.camel-cat-City:before,
+.camel-cat-Friendly:before,
+.camel-cat-Desert:before,
+.camel-cat-Mountain:before {
+  position: absolute;
+  content: '';
+  height: 60px;
+  width: 60px;
+  left: 110px;
+  background-size: contain !important;
+  background-repeat: no-repeat !important;
+  top: -55px;
+}
+
+p.camel-cat-City:before {
+  background: url(asset-path('city-camel.png'));
+}
+
+p.camel-cat-Friendly-camel:before {
+  background: url(asset-path('friendly-camel.png'));
+}
+
+p.camel-cat-Desert:before {
+  background: url(asset-path('desert-camel.png'));
+}
+
+p.camel-cat-Mountain:before {
+  background: url(asset-path('mountain-camel.png'));
+  left: 117px !important;
+}
+
+p.camel-cat-Fancy:before {
+  background: url(asset-path('fancy-camel.png'));
+  left: 117px !important;
+}
+
+p.camel-cat-Speed:before {
+  background: url(asset-path('speed-camel.png'));
+  left: 117px !important;
+}
+
+p.camel-cat-Horny:before {
+  background: url(asset-path('horny-camel.png'));
+  left: 117px !important;
+}
+
+p.camel-cat-Swaggy:before {
+  background: url(asset-path('swaggy-camel.png'));
+  left: 117px !important;
+}
+
+p.camel-cat-Water:before {
+  background: url(asset-path('water-camel.png'));
+  left: 117px !important;
+}
+
+p.camel-cat-Apartment:before {
+  background: url(asset-path('apartment-camel.png'));
+  left: 117px !important;
+}

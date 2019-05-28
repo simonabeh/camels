@@ -3,7 +3,7 @@
     <%= f.input :name %>
     <%= f.input :description %>
     <%= f.input :category, collection: Camel::CATEGORY %>
-    <%= f.input :location %>
+    <%= f.input :location, collection: Camel::CITY %>
     <%= f.input :price %>
     <%= f.input :photo %>
     <%= f.input :photo_cache, as: :hidden %>

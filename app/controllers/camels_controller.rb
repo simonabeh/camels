@@ -9,7 +9,9 @@ class CamelsController < ApplicationController
     @markers = @camels.map do |camel|
       {
         lat: camel.latitude,
-        lng: camel.longitude
+        lng: camel.longitude,
+        infoWindow: render_to_string(partial: "infowindow", locals: { camel: camel }),
+        image_url: helpers.asset_url('camel.png')
       }
     end
   end

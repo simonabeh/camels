@@ -1,5 +1,8 @@
 require 'faker'
 
+Booking.destroy_all
+p "Cleaning booking' database..."
+p "Creating new bookings"
 Camel.destroy_all
 p "Cleaning camels' database..."
 p "Creating new camels"
@@ -32,13 +35,14 @@ p "There are #{User.count} users"
 
 camel_category = ['Apartment', 'City', 'Desert', 'Mountain', 'Speed Race',
   'Water', 'Friendly Camel', 'Horny Camel', 'Fancy Camel', 'Swaggy Camel']
+city = ['Paris', 'Marseille', 'Rouen', 'Bordeaux', 'Lille', 'Vesoul', 'New York', 'Beyrouth', 'Casablanca', 'Dubai', 'Helsinki']
 
 camel_picture = ["https://res.cloudinary.com/simonabeh/image/upload/v1558948931/camel-1.jpg", "https://res.cloudinary.com/simonabeh/image/upload/v1558948925/camel-2.jpg", "https://res.cloudinary.com/simonabeh/image/upload/v1558948925/camel-3.jpg", "https://res.cloudinary.com/simonabeh/image/upload/v1558948916/camel-4.jpg", "https://res.cloudinary.com/simonabeh/image/upload/v1558948896/camel-5.jpg"]
 
 5.times do camel = Camel.new(name: Faker::FunnyName.name,
             description:  Faker::Quote.yoda,
             category:     camel_category.sample,
-            location:     Faker::Address.city,
+            location:     city.sample,
             price:        rand(100),
             remote_photo_url: camel_picture.sample)
             camel.user = User.first
