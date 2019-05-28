@@ -4,6 +4,14 @@ class CamelsController < ApplicationController
 
   def index
     @camels = policy_scope(Camel)
+    @camels = Camel.where.not(latitude: nil, longitude: nil)
+
+    @markers = @camels.map do |camel|
+      {
+        lat: camel.latitude,
+        lng: camel.longitude
+      }
+    end
   end
 
   def show
