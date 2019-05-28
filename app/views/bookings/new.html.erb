@@ -1,13 +1,16 @@
 <div class='background-camels'>
   <div class="bookingform">
-    <h1>Book <%= @camel.name %></h1>
-    <div class="imagebooking", style="background-image: url('<%= cl_image_path @camel.photo %>');"></div>
-    <h2>Date</h2>
-    <div class="container mt-2">
-      <%= simple_form_for [@camel, @booking] do |f| %>
-        <%= f.input :date, label: false%>
-        <%= f.submit class: 'btn btn-primary' %>
-      <% end %>
+    <div class="container">
+      <div class="form-wrapper" style="width: 300px; margin: 0 auto;">
+        <h1>Book <%= @camel.name %></h1>
+
+        <div class="imagebooking", style="background-image: url('<%= cl_image_path @camel.photo %>');"></div>
+          <br>
+        <%= simple_form_for [@camel, @booking] do |f| %>
+        <%= f.input :date, label: false, placeholder: "Select your date", as: :string, required: false, input_html: {class: "datepicker"} %>
+        <%= f.button :submit, "Create your booking", class: "btn btn-primary" %>
+        <% end %>
+      </div>
     </div>
     <p id="show-text"><%= link_to 'Show all camels available', camels_path%></p>
   </div>
