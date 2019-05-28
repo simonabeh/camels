@@ -1,10 +1,11 @@
 class BookingsController < ApplicationController
-  before_action :set_camel, only: [:show, :new, :create, :edit, :update, :destroy]
+  before_action :set_camel, only: [:show, :new, :create, :edit, :update]
   skip_after_action :verify_authorized, except: :index
   skip_after_action :verify_policy_scoped, only: :index
 
   def index
-    @bookings = Booking.all
+    @bookings = current_user.bookings
+    @camels = current_user.camels
   end
 
   def show
@@ -29,9 +30,9 @@ class BookingsController < ApplicationController
 
   def destroy
     @booking = Booking.find(params[:id])
-    @camel = @booking.camel
+    # @camel = @booking.camel
     @booking.destroy
-    redirect_to root_path
+    redirect_to bookings_path
   end
 
   private
