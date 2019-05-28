@@ -21,7 +21,11 @@
       <div class="col-12 col-lg-4 col-md-6 col-sm-12">
 
         <div class="card-product">
-          <div class="card-photo" style= "background-image: url('<%= cl_image_path camel.photo %>');">
+          <% if !camel.photo.file.nil? %>
+            <div class="card-photo" style= "background-image: url('<%= cl_image_path camel.photo %>');">
+          <% else %>
+            <div class="card-photo" style= "background-image: url('https://upload.wikimedia.org/wikipedia/commons/4/43/07._Camel_Profile%2C_near_Silverton%2C_NSW%2C_07.07.2007.jpg');">
+          <% end %>
 
           </div>
 
