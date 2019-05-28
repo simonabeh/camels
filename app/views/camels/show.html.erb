@@ -3,27 +3,39 @@
     <%= cl_image_tag @camel.photo, height: 300, width: 400, crop: :fill %>
   </div>
   <div class="product-info">
-    <h1> <%= @camel.name %></h1>
+    <div class='background-camels'>
+      <div class="bookingform">
+        <div class="container">
+          <div class="form-wrapper" style="width: 300px; margin: 0 auto;">
+           <h1> <%= @camel.name %></h1>
+           <p><%= @camel.description %></p>
+           <p><%= "Category: #{@camel.category}" %></p>
+           <p><%= "Location: #{@camel.location}" %></p>
+           <p><%= "Price/day - VAT included" %></p>
+           <h3><%= "#{@camel.price}$" %></h3>
+           <%= simple_form_for [@camel, @booking] do |f| %>
+           <%= f.input :date, label: false, placeholder: "Select your date", as: :string, required: false, input_html: {class: "datepicker"} %>
+           <%= f.button :submit, "Create your booking", class: "btn btn-primary" %>
+           <% end %>
+         </div>
+       </div>
+       <p id="show-text"><%= link_to 'Show all camels available', camels_path%></p>
+     </div>
+   </div>
 
-    <p><%= @camel.description %></p>
-    <p><%= "Category: #{@camel.category}" %></p>
-    <p><%= "Location: #{@camel.location}" %></p>
-    <p><%= "Price/day - VAT included" %></p>
-    <h3><%= "#{@camel.price}$" %></h3>
+   <div class="show-action">
 
-    <div class="show-action">
-
-      <h4><%= link_to "Book a slot", new_camel_booking_path(@camel), class:"btn btn-book" %></h4>
-
-      <% if policy(@camel).destroy? %>
-      <div class= "remove">
-        <%= link_to camel_path(@camel), method: :delete, class: "btn btn-delete" do %>
-        <i class="fas fa-trash"></i>
-        <% end %>
-      </div>
+    <% if policy(@camel).destroy? %>
+    <div class= "remove">
+      <%= link_to camel_path(@camel), method: :delete, class: "btn btn-delete" do %>
+      <i class="fas fa-trash"></i>
       <% end %>
     </div>
+    <% end %>
   </div>
 </div>
+</div>
+
+
 
 <h6>BlablaKaml, ‌I‌n‌c‌.‌, is a French online marketplace and micro-mobility service brokerage company based in Villa Gaudelet, France. Members can use the service to arrange or offer alternatives to e-scooters, primarily camels. If our fleet is fully booked, a dromedary will be offered.</h6>
