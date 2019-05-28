@@ -25,3 +25,23 @@
   }
 }
 
+.btn-navbar-right {
+  background-color: black;
+  border-radius: 0.5px;
+  padding: 8px 15px;
+  margin: 0 3px;
+  font-size: 15px;
+  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+
+}
+
+.btn-navbar-left {
+  background-color: black;
+  border-radius: 20px 0 0 20px;
+  padding: 8px 15px;
+  margin: 0;
+  font-size: 15px;
+  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+}
+
+
