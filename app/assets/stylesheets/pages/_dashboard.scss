@@ -52,3 +52,37 @@
 #info {
   font-style: italic;
 }
+
+#bookings-title {
+  background: black;
+  border-radius: 10px;
+  padding: 15px;
+  &:hover {
+    opacity: 0.9;
+  }
+}
+
+.dashboard-section {
+  height: 500px;
+  transition: all 450ms ease-out;
+  overflow: scroll;
+}
+
+.hide {
+  // display: none;
+  // overflow: hidden;
+  height: 0px;
+  // transition: 350ms
+  transition: all 450ms ease-out;
+  // opacity: 0;
+  height: 0 !important;
+}
+
+#camels-title {
+  background: black;
+  border-radius: 10px;
+  padding: 15px;
+  &:hover {
+    opacity: 0.9;
+  }
+}
