@@ -6,10 +6,12 @@ class Camel < ApplicationRecord
   CATEGORY = ['Apartment', 'City', 'Desert', 'Mountain', 'Speed Race',
   'Water', 'Friendly Camel', 'Horny Camel', 'Fancy Camel', 'Swaggy Camel']
 
+CITY = ['Paris', 'Marseille', 'Rouen', 'Bordeaux', 'Lille', 'Vesoul', 'New York', 'Beyrouth', 'Casablanca', 'Dubai', 'Helsinki']
+
   validates :name, presence: true
   validates :description, presence: true
   validates :category, inclusion: { in: CATEGORY }
-  validates :location, presence: true
+  validates :location, presence: true, inclusion: { in: CITY }
   validates :price, presence: true
 
   geocoded_by :location
