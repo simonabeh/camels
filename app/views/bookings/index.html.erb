@@ -1,3 +1,79 @@
-<h1>Bookings#index</h1>
-<p>Find me in app/views/bookings/index.html.erb</p>
-<%= @bookings %>
+<div class="dashboard">
+
+  <h1>My Dashboard</h1>
+
+  <h3>My bookings</h3>
+
+  <div class="hide">
+
+    <div class="dashboard-section">
+      <div class="headers-column">
+        <p class="headers-middle">Name</p>
+        <p>Date of Booking</p>
+        <p></p>
+      </div>
+
+      <% @bookings.each do |booking| %>
+        <div class="rows-dashboard">
+          <p class="row-middle">
+            <%= booking.camel.name %>
+          </p>
+          <p id="info">
+            <%= booking.date.strftime("%m/%d/%Y") %>
+          </p>
+          <%= link_to booking_path(booking), method: :delete, class: "btn btn-delete" do %>
+            <i class="fas fa-trash"></i>
+          <% end %>
+        </div>
+        <% end %>
+    </div>
+
+    <div id="others-camel">
+      <%= link_to "Book another camel !", root_path, class: "btn btn-home" %>
+    </div>
+
+  </div>
+
+  <h3>My camels' fleet</h3>
+
+  <div class="hide">
+
+    <div class="dashboard-section">
+      <div class="headers-column">
+        <p class="headers-middle">Name</p>
+        <p>Location</p>
+        <p></p>
+      </div>
+
+      <% @camels.each do |camel| %>
+        <div class="rows-dashboard">
+          <p class="row-middle">
+            <%= camel.name %>
+          </p>
+          <p id="info">
+            <%= camel.location %>
+          </p>
+          <%= link_to camel_path(camel), method: :delete, class: "btn btn-delete" do %>
+            <i class="fas fa-trash"></i>
+          <% end %>
+        </div>
+        <% end %>
+    </div>
+
+    <div id="expand-camel">
+      <%= link_to "Expand your fleet", new_camel_path, class: "btn btn-home" %>
+    </div>
+
+  </div>
+
+</div>
+
+
+
+
+
+
+
+
+
+
