@@ -7,5 +7,8 @@ import '@mapbox/mapbox-gl-geocoder/dist/mapbox-gl-geocoder.css';
 initMapbox();
 
 import { initDropdownMenu } from '../components/dropdown';
-initDropdownMenu();
+
+if (document.getElementById('bookings-title')) {
+  initDropdownMenu();
+}
 
