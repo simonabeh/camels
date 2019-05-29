@@ -1,34 +1,39 @@
 .bookingform {
   width: 500px;
-  margin: 0 auto;
   background-color: #c2b280;
   border-radius: 5px;
   box-shadow: 0 0 30px rgba(0, 0, 0, 0.3);
   text-align: center;
   color: black;
   font-weight: bold;
-  padding: 20px;
-
+  padding: 50px;
+  height: 670px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
   h1 {
-    font-size: 24px;
+    font-size: 40px;
     margin-bottom: 10px;
     text-transform: uppercase;
   }
-
   a {
     color: black;
-
     &:hover {
       text-decoration: none;
       color: rgb(120, 120, 120);
     }
   }
-
   .btn {
     color: white;
     background-color: black;
     border-radius: 24px;
-    margin-bottom: 16px;
+    margin: 16px;
+  }
+  span {
+    text-transform: uppercase;
+    font-weight: 600;
+    font-size: 19px;
   }
 }
 
@@ -62,3 +67,6 @@
 
 }
 
+input#booking_date {
+  border-radius: 5px;
+}
