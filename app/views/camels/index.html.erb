@@ -33,7 +33,7 @@
             <h2><%= camel.name %></h2>
             <p><%= "#{camel.category}, #{camel.location}" %></p>
             <h3><%= camel.price %>$</h3>
-            <%= link_to "Book #{camel.name.split[0]}", new_camel_booking_path(camel), class: "btn btn-book" %>
+            <%= link_to "Book #{camel.name.split[0]}", camel_path(camel), class: "btn btn-book" %>
             <h5><%= link_to "More infos", camel_path(camel), class: "more" %></h5>
           </div>
         </div>
