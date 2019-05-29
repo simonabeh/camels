@@ -17,9 +17,18 @@ class CamelsController < ApplicationController
   end
 
   def show
-    # @camel = Camel.find(params[:id])
+    @camel = Camel.find(params[:id])
     @booking = Booking.new
     authorize @camel
+
+    # @camels = Camel.where.not(latitude: nil, longitude: nil)
+    @marker = [
+      {
+        lat: @camel.latitude,
+        lng: @camel.longitude,
+        image_url: helpers.asset_url('camel.png')
+      }
+    ]
   end
 
   def new
