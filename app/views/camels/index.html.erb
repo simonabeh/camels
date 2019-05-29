@@ -6,8 +6,26 @@
   </div>
 </div>
 
+<div class="container">
+  <h1 class="titles-index">Advantages</h1>
+  <div class="row-cards-features" >
+    <div class="card-feature">
+      <%= image_tag 'undraw_desert.png' %>
+      <h4>Awesome ride</h4>
+    </div>
+    <div class="card-feature">
+      <%= image_tag 'undraw_itinary.png' %>
+      <h4>Available everywhere</h4>
+    </div>
+    <div class="card-feature">
+      <%= image_tag 'undraw_mobile.png' %>
+      <h4>Mobile access</h4>
+    </div>
+  </div>
+</div>
+
 <div class="map-container">
-  <h1>Our camel map</h1>
+  <h1 class="titles-index">Our camel map</h1>
   <div id="map"
     data-markers="<%= @markers.to_json %>"
     data-mapbox-api-key="<%= ENV['MAPBOX_API_KEY'] %>"
@@ -17,7 +35,7 @@
 
 <div class="container">
 
-  <h1>Our selection</h1>
+  <h1 class="titles-index">Our selection</h1>
   <div class="row">
       <% @camels.each do |camel| %>
       <div class="col-12 col-lg-4 col-md-6 col-sm-12">
@@ -42,24 +60,6 @@
 
       </div>
       <% end %>
-  </div>
-</div>
-
-<div class="container">
-  <h1>Advantages</h1>
-  <div class="row-cards-features" >
-    <div class="card-feature">
-      <%= image_tag 'undraw_desert.png' %>
-      <h4>Awesome ride</h4>
-    </div>
-    <div class="card-feature">
-      <%= image_tag 'undraw_itinary.png' %>
-      <h4>Available everywhere</h4>
-    </div>
-    <div class="card-feature">
-      <%= image_tag 'undraw_mobile.png' %>
-      <h4>Mobile access</h4>
-    </div>
   </div>
 </div>
 
