@@ -1,6 +1,12 @@
 <div class="camel-spec">
+  <div class="pic-and-map">
   <div class="product-image">
     <%= cl_image_tag @camel.photo, height: 300, width: 400, crop: :fill %>
+  </div>
+  <div id="map"
+    data-markers="<%= @markers.to_json %>"
+    data-mapbox-api-key="<%= ENV['MAPBOX_API_KEY'] %>">
+  </div>
   </div>
   <div class="product-info">
     <div class='background-camels'>
@@ -9,7 +15,10 @@
           <div class="form-wrapper" style="width: 300px; margin: 0 auto;">
            <h1> <%= @camel.name %></h1>
            <p class="camel-description"><%= @camel.description %></p>
-           <p class="camel-cat-<%= @camel.category %>"><%= "Category: #{@camel.category}" %></p>
+           <p class="camel-cat-<%= @camel.category %>"><%= "Category: #{@camel.category}" %> </p>
+           <p class="camel-loc-<%= @camel.location %>"><%= "Location: #{@camel.location}" %>
+            </p>
+
            <div class="price">
            <p id="vat"><%= "Price/day - VAT included" %></p>
            <h3><%= "#{@camel.price}$  " %></h3>

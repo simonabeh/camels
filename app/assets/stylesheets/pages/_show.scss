@@ -10,6 +10,12 @@
   border-radius: 5px;
 }
 
+.pic-and-map {
+  display: flex;
+  flex-direction: column;
+}
+
+
 .product-info {
   padding: 20px 20px 20px 0;
   p {
@@ -150,3 +156,4 @@ p.camel-cat-Apartment:before {
   background: url(asset-path('apartment-camel.png'));
   left: 117px !important;
 }
+
