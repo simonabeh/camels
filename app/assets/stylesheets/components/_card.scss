@@ -59,3 +59,29 @@
   border-radius: 24px 24px 0 0;
 }
 
+.card-feature {
+  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+  background: white;
+  border-radius: 8px;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 30%;
+  h4 {
+    text-align: center;
+    font-size: 20px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    font-weight: bold;
+  }
+}
+
+
+.row-cards-features {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 75px;
+}
