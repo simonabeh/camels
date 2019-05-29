@@ -4,7 +4,7 @@
     <%= cl_image_tag @camel.photo, height: 300, width: 400, crop: :fill %>
   </div>
   <div id="map"
-    data-markers="<%= @markers.to_json %>"
+    data-markers="<%= @marker.to_json %>"
     data-mapbox-api-key="<%= ENV['MAPBOX_API_KEY'] %>">
   </div>
   </div>
