@@ -2,11 +2,14 @@
   display: flex;
   justify-content: space-evenly;
   padding-top: 50px;
+  align-items: center;
+  width: 80%;
+  margin: auto;
 }
 
 .product-image {
   float: left;
-  padding: 20px 20px 20px 0;
+  padding: 0 0 20px 0;
   border-radius: 5px;
 }
 
@@ -40,18 +43,27 @@ h6 {
     align-items: center;
     justify-content: center;
     flex-direction: row-reverse;
+    margin: 10px;
   p{
     font-size:10px;
     margin-left: 15px;
+    margin-bottom: 0;
+
   }
   h3 {
     margin: 0px;
   }
 }
 
+
+
+
+
+
 p.camel-description {
   position: relative;
-  text-transform: capitalize;
+  width: 60%;
+  // text-transform: capitalize;
 }
 
 p.camel-description:before {
@@ -60,9 +72,10 @@ p.camel-description:before {
   height: 20px;
   width: 20px;
   background: url(asset-path('quote-left.png'));
-  left: 0;
+  left: -20px;
   background-size: contain;
   background-repeat: no-repeat;
+  transform: rotate(-20deg);
 }
 
 p.camel-description:after {
@@ -71,9 +84,10 @@ p.camel-description:after {
   height: 20px;
   width: 20px;
   background: url(asset-path('quote-right.png'));
-  right: 0;
+  right: -20px;
   background-size: contain;
   background-repeat: no-repeat;
+  transform: rotate(20deg);
 }
 
 .camel-cat-City,
@@ -87,7 +101,7 @@ p.camel-description:after {
 .camel-cat-Desert,
 .camel-cat-Mountain {
   position: relative;
-  margin-top: 70px !important;
+  margin: 70px 0 15px 0 !important;
 }
 
 .camel-cat-Apartment:before,
@@ -139,7 +153,7 @@ p.camel-cat-Speed:before {
 
 p.camel-cat-Horny:before {
   background: url(asset-path('horny-camel.png'));
-  left: 117px !important;
+  left: 42px !important;
 }
 
 p.camel-cat-Swaggy:before {
@@ -153,7 +167,7 @@ p.camel-cat-Water:before {
 }
 
 p.camel-cat-Apartment:before {
-  background: url(asset-path('apartment-camel.png'));
-  left: 117px !important;
+  background: url(asset-path('appartement-camel.png'));
+  left: 27px !important;
 }
 

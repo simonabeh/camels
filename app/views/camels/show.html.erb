@@ -8,44 +8,33 @@
     data-mapbox-api-key="<%= ENV['MAPBOX_API_KEY'] %>">
   </div>
   </div>
-  <div class="product-info">
-    <div class='background-camels'>
-      <div class="bookingform">
-        <div class="container">
-          <div class="form-wrapper" style="width: 300px; margin: 0 auto;">
-           <h1> <%= @camel.name %></h1>
-           <p class="camel-description"><%= @camel.description %></p>
-           <p class="camel-cat-<%= @camel.category %>"><%= "Category: #{@camel.category}" %> </p>
-           <p class="camel-loc-<%= @camel.location %>"><%= "Location: #{@camel.location}" %>
-            </p>
 
-           <div class="price">
-           <p id="vat"><%= "Price/day - VAT included" %></p>
-           <h3><%= "#{@camel.price}$  " %></h3>
-           </div>
-           <%= simple_form_for [@camel, @booking] do |f| %>
-           <%= f.input :date, label: false, placeholder: "Select your date", as: :string, required: false, input_html: {class: "datepicker"} %>
-           <%= f.button :submit, "Create your booking", class: "btn btn-primary" %>
-           <% end %>
-         </div>
-       </div>
-       <div class="show-action">
+  <div class="bookingform">
+    <h1> <%= @camel.name %></h1>
+    <p class="camel-description"><%= @camel.description %></p>
+    <p class="camel-cat-<%= @camel.category %>">Category<br><span><%= "#{@camel.category}" %></span> </p>
+    <p class="camel-loc-<%= @camel.location %>">Location<br><span><%= "#{@camel.location}" %></span></p>
 
-        <% if policy(@camel).destroy? %>
-        <div class= "remove">
-          <%= link_to camel_path(@camel), method: :delete, class: "btn btn-delete" do %>
-          <i class="fas fa-trash"></i>
-          <% end %>
-        </div>
-        <% end %>
-      </div>
-      <p id="show-text"><%= link_to 'Show all camels available', camels_path%></p>
-
+    <div class="price">
+      <p id="vat"><%= "Price/day - VAT included" %></p>
+      <h3><%= "#{@camel.price}$  " %></h3>
     </div>
+
+    <%= simple_form_for [@camel, @booking] do |f| %>
+    <%= f.input :date, label: false, placeholder: "Select your date", as: :string, required: false, input_html: {class: "datepicker"} %>
+    <%= f.button :submit, "Create your booking", class: "btn" %>
+    <% end %>
+
+    <% if policy(@camel).destroy? %>
+    <div class= "remove">
+      <%= link_to camel_path(@camel), method: :delete, class: "btn btn-delete" do %>
+      <i class="fas fa-trash"></i>
+      <% end %>
+    </div>
+    <% end %>
+    <p id="show-text"><%= link_to 'Show all camels available', camels_path%></p>
   </div>
 
-
-</div>
 </div>
 
 
